@@ -57,8 +57,7 @@ The system is designed to automate and digitize the traditional visa application
 
 ### **Database**:
 **Key Tables:**
-applications: Stores user application data, including personal and status details.
-passport_details: Contains passport-related information.
-visa_details: Manages visa preferences and additional details.
-email_verifications: Handles email validation tokens.
-admin_users: Manages admin accounts and access control.
+-applications: Stores user application data, including personal and status details.
+-passport_details: Contains passport-related information.
+-visa_details: Manages visa preferences and additional details.
+-admin_users: Manages admin accounts and access control.
