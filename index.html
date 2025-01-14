@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Visa Application System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(255, 255, 255);
+            color: darkblue;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: darkblue;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        header a:hover {
+            text-decoration: underline;
+        }
+        .banner {
+            width: 105%;
+            max-height:252px ;
+            object-fit: cover;
+        }
+        .container {
+            text-align: center;
+            padding: 30px;
+        }
+        .btn {
+            background-color: crimson;
+            color: white;
+            padding: 15px 30px;
+            margin: 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            display: inline-block;
+            text-align: center;
+            width: 250px;
+        }
+        .btn:hover {
+            background-color: maroon;
+        }
+        .btn img {
+            width: 30px;
+            height: 30px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div>Visa Application System</div>
+        <div><a href="admin.php">Admin Login</a></div>
+    </header>
+    
+    <img src="banner.png"our banner" class="banner">
+
+    <div class="container">
+        <h1>Welcome to the Visa Application System</h1>
+        <p>Apply for a visa or check your application status easily and securely.</p>
+        
+        <a href="personal_details.php" class="btn">
+            <img src="apply.jpg" alt="Apply Icon"> Apply for Visa
+        </a>
+        <a href="status_check.php" class="btn">
+            <img src="status.png" > Check Application Status
+        </a>
+    </div>
+</body>
+</html>
