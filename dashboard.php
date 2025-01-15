@@ -16,7 +16,7 @@ if (isset($_GET['delete']) && is_numeric($_GET['delete'])) {
 //deleteing  the application sql
     $sql = "DELETE FROM applications WHERE application_id = $application_id";
     if (mysqli_query($conn, $sql)) {
-        header('Location: admin_dashboard.php?message=Application+deleted+successfully');
+        header('Location: dashboard.php?message=Application+deleted+successfully');
         exit();
     } else {
         die("Error deleting application: " . mysqli_error($conn));
@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['update_status'])) {
 
     $sql = "UPDATE applications SET status = '$new_status' WHERE application_id = $application_id";
     if (mysqli_query($conn, $sql)) {
-        header('Location: admin_dashboard.php?message=Status+updated+successfully');
+        header('Location: dashboard.php?message=Status+updated+successfully');
         exit();
     } else {
         die("Error updating status: " . mysqli_error($conn));
@@ -199,7 +199,7 @@ if (!$result) {
                             <td><?= htmlspecialchars($row['submission_date']); ?></td>
                             <td class="action-links">
                                 <a href="view_application.php?id=<?= $row['application_id']; ?>">View</a>
-                                <a href="admin_dashboard.php?delete=<?= $row['application_id']; ?>" onclick="return confirm('Are you sure you want to delete this application?');">Delete</a>
+                                <a href="dashboard.php?delete=<?= $row['application_id']; ?>" onclick="return confirm('Are you sure you want to delete this application?');">Delete</a>
                             </td>
                         </tr>
                     <?php endwhile; ?>
